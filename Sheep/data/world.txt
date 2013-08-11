@@ -1,0 +1,8 @@
+grass grass.png
+backpack 5 0 3
+apple 4 2 0
+apple 5 2 1
+apple 4 3 2
+rabbit 16 12
+rabbit 15 6
+rabbit 8 8

@@ -1,0 +1,6 @@
+sudo apt-get install libsdl-dev libsdl-net1.2 libsdl-net1.2-dev libsdl-image1.2 libsdl-image1.2-dev
+mkdir build
+cd build
+cmake ..
+make
+
