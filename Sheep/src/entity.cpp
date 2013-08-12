@@ -225,4 +225,5 @@ void Entity::unpack(std::istream &is)
 	is >> x >> y >> direction >> id;
 	parent = world->get_entity_from_id(id);
 }
+
 }

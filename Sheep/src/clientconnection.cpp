@@ -495,5 +495,5 @@ int ClientConnection::get_status()
 {
 	return status;
 }
-}
 
+}

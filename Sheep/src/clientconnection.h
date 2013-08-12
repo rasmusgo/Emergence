@@ -111,6 +111,5 @@ private:
 };
 
 }
-
 #endif // CLIENTCONNECTION_H
 
