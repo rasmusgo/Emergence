@@ -5,6 +5,7 @@
 #include "SDL_net.h"
 
 #include "entity.h"
+#include "binding.h"
 
 #include <deque>
 #include <string>
@@ -100,6 +101,7 @@ private:
 
     std::map<Uint32, DataEntity> client_entities;
     std::map<SDLKey, Uint32> active_keys;
+    std::map<SDLKey, Binding> bindings;
 
     SDL_mutex *send_mutex;
     SDL_mutex *messages_mutex;

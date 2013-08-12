@@ -57,6 +57,11 @@ namespace WolfSheepServer
         Entity::drop_me();
     }
 
+	void Rabbit::prepare_action()
+	{
+		// Don't increment prepared because it is not decremented in action
+	}
+
 	void Rabbit::action()
     {
         // Don't do anything if picked up

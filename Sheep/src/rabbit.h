@@ -11,6 +11,7 @@ namespace WolfSheepServer
 		public:
 			Rabbit(int x, int y, bool male);
 			virtual ~Rabbit();
+			virtual void prepare_action();
 			virtual void action();
 			virtual void tick();
 			virtual int get_w() const;

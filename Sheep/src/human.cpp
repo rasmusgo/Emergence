@@ -39,6 +39,8 @@ namespace WolfSheepServer
 
 	void Human::action()
     {
+		--prepared;
+
         if (in_primary_hand == 0)
             return;
 
@@ -58,7 +60,9 @@ namespace WolfSheepServer
 
 	void Human::grab()
     {
-        if (in_primary_hand == 0)
+		--prepared;
+
+		if (in_primary_hand == 0)
         {
             // Pick up from world
             std::vector<Entity*> container;
@@ -109,6 +113,8 @@ namespace WolfSheepServer
 
 	void Human::drop()
     {
+		--prepared;
+
         if (in_primary_hand != 0)
         {
             // Drop into world
@@ -150,6 +156,8 @@ namespace WolfSheepServer
 
 	void Human::swap()
     {
+		--prepared;
+
         Entity *tmp = in_secondary_hand;
         in_secondary_hand = in_primary_hand;
         in_primary_hand = tmp;

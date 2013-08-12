@@ -14,7 +14,8 @@ namespace WolfSheepServer
             parent(0),
             x(0),
             y(0),
-            direction(0)
+            direction(0),
+            prepared(0)
     {
 
     }
@@ -25,12 +26,54 @@ namespace WolfSheepServer
             parent->remove_reference(this);
     }
 
+    void Entity::prepare_action()
+    {
+    	++prepared;
+    }
+
+    void Entity::prepare_grab()
+    {
+    	++prepared;
+    }
+
+    void Entity::prepare_drop()
+    {
+    	++prepared;
+    }
+
+    void Entity::prepare_swap()
+    {
+    	++prepared;
+        std::cout << "prepared: " << prepared << std::endl;
+    }
+
+    void Entity::action()
+    {
+    	--prepared;
+    }
+
+    void Entity::grab()
+    {
+    	--prepared;
+    }
+
+    void Entity::drop()
+    {
+    	--prepared;
+    }
+
+    void Entity::swap()
+    {
+    	--prepared;
+        std::cout << "prepared: " << prepared << std::endl;
+    }
+
     void Entity::right()
     {
         if (parent != 0)
             return;
 
-        if ( !world->is_blocked(get_x()+1, get_y()) )
+        if ( !prepared && !world->is_blocked(get_x()+1, get_y()) )
             ++x;
 
         direction = 0;
@@ -44,7 +87,7 @@ namespace WolfSheepServer
         if (parent != 0)
             return;
 
-        if ( !world->is_blocked(get_x(), get_y()-1) )
+        if ( !prepared && !world->is_blocked(get_x(), get_y()-1) )
             --y;
 
         direction = 1;
@@ -58,7 +101,7 @@ namespace WolfSheepServer
         if (parent != 0)
             return;
 
-        if ( !world->is_blocked(get_x()-1, get_y()) )
+        if ( !prepared && !world->is_blocked(get_x()-1, get_y()) )
             --x;
 
         direction = 2;
@@ -72,7 +115,7 @@ namespace WolfSheepServer
         if (parent != 0)
             return;
 
-        if ( !world->is_blocked(get_x(), get_y()+1) )
+        if ( !prepared && !world->is_blocked(get_x(), get_y()+1) )
             ++y;
 
         direction = 3;
@@ -119,16 +162,18 @@ namespace WolfSheepServer
 
     int Entity::get_offset_x() const
     {
+    	int offset = (prepared > 0 ? dx[direction] * 5: 0);
         if (parent)
-            return parent->get_offset_x() + parent->get_offset_x(this);
-        return 0;
+            offset += parent->get_offset_x() + parent->get_offset_x(this);
+        return offset;
     }
 
     int Entity::get_offset_y() const
     {
+    	int offset = (prepared > 0 ? dy[direction] * 5: 0);
         if (parent)
-            return parent->get_offset_y() + parent->get_offset_y(this);
-        return 0;
+            offset += parent->get_offset_y() + parent->get_offset_y(this);
+        return offset;
     }
 
     int Entity::get_offset_z() const

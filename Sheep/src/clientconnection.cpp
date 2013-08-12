@@ -5,6 +5,7 @@
 #include "clientmanager.h"
 #include "entity.h"
 #include "world.h"
+#include "binding.h"
 
 #include <deque>
 #include <string>
@@ -18,6 +19,16 @@ namespace WolfSheepServer
         manager(manager)
     {
         printf("ClientConnection()\n");
+
+        bindings[SDLK_LEFT]  = bindings[SDLK_a] = Binding(&Entity::left, 200);
+        bindings[SDLK_RIGHT] = bindings[SDLK_d] = Binding(&Entity::right, 200);
+        bindings[SDLK_UP]    = bindings[SDLK_w] = Binding(&Entity::up, 200);
+        bindings[SDLK_DOWN]  = bindings[SDLK_s] = Binding(&Entity::down, 200);
+
+        bindings[SDLK_SPACE] = bindings[SDLK_e] = Binding(&Entity::prepare_action, &Entity::action);
+        bindings[SDLK_LSHIFT]= bindings[SDLK_f] = Binding(&Entity::prepare_grab, &Entity::grab);
+        bindings[SDLK_LCTRL] = bindings[SDLK_g] = Binding(&Entity::prepare_drop, &Entity::drop);
+        bindings[SDLK_LALT]  = bindings[SDLK_q] = Binding(&Entity::prepare_swap, &Entity::swap);
 
         name = SDLNet_ResolveIP(SDLNet_TCP_GetPeerAddress(socket));
         update_entity_connection();
@@ -399,28 +410,6 @@ namespace WolfSheepServer
         return packet;
     }
 
-// TODO: Move me
-        struct Binding
-        {
-            Binding() :
-                    f(0),
-                    r(0)
-            {
-            }
-            Binding(EntityMemberFunction function, int repeat) :
-                    f(function),
-                    r(repeat)
-            {
-            }
-            Binding(const EntityMemberFunction &function) :
-                    f(function),
-                    r(0)
-            {
-            }
-            EntityMemberFunction f;
-            Uint32 r;
-        };
-
     void ClientConnection::process_messages()
     {
         Uint32 now = SDL_GetTicks();
@@ -461,24 +450,14 @@ namespace WolfSheepServer
         }
 
         // TODO: sort actions by arrival time
-        std::map<SDLKey, Binding> bindings;
-        bindings[SDLK_LEFT]  = bindings[SDLK_a] = Binding(&Entity::left, 200);
-        bindings[SDLK_RIGHT] = bindings[SDLK_d] = Binding(&Entity::right, 200);
-        bindings[SDLK_UP]    = bindings[SDLK_w] = Binding(&Entity::up, 200);
-        bindings[SDLK_DOWN]  = bindings[SDLK_s] = Binding(&Entity::down, 200);
-
-        bindings[SDLK_SPACE] = bindings[SDLK_e] = &Entity::action;
-        bindings[SDLK_LSHIFT]= bindings[SDLK_f] = &Entity::grab;
-        bindings[SDLK_LCTRL] = bindings[SDLK_g] = &Entity::drop;
-        bindings[SDLK_LALT]  = bindings[SDLK_q] = &Entity::swap;
 
         for (typeof(holds.begin()) it = holds.begin(); it != holds.end(); ++it)
         {
             typeof(bindings.begin()) b = bindings.find(it->first);
-            if (b != bindings.end() && presses.find(it->first) == presses.end() && b->second.r != 0 && it->second >= b->second.r)
+            if (b != bindings.end() && presses.find(it->first) == presses.end())
             {
                 // Call the member function on the entity
-                (entity->*(b->second.f))();
+				b->second.onRepeat(entity, it->second);
             }
         }
         for (typeof(presses.begin()) it = presses.begin(); it != presses.end(); ++it)
@@ -487,12 +466,20 @@ namespace WolfSheepServer
             if (b != bindings.end())
             {
                 // Call the member function on the entity
-                (entity->*(b->second.f))();
+				b->second.onPressed(entity);
             }
         }
 
         for (typeof(releases.begin()) it = releases.begin(); it != releases.end(); ++it)
+        {
             active_keys.erase(it->first);
+			typeof(bindings.begin()) b = bindings.find(it->first);
+			if (b != bindings.end())
+			{
+				// Call the member function on the entity
+				b->second.onReleased(entity);
+			}
+        }
     }
 
     int ClientConnection::get_status()

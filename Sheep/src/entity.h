@@ -16,10 +16,14 @@ namespace WolfSheepServer
     public:
         Entity();
         virtual ~Entity();
-        virtual void action() {} // triggered by SPACE
-        virtual void grab() {} // triggered by SHIFT
-        virtual void drop() {} // triggered by CTRL
-        virtual void swap() {} // triggered by ALT
+        virtual void prepare_action(); // triggered before action (pressing down SPACE)
+        virtual void prepare_grab(); // triggered before grab (pressing down SHIFT)
+        virtual void prepare_drop(); // triggered before drop (pressing down CTRL)
+        virtual void prepare_swap(); // triggered before swap (pressing down ALT)
+        virtual void action(); // triggered by SPACE
+        virtual void grab(); // triggered by SHIFT
+        virtual void drop(); // triggered by CTRL
+        virtual void swap(); // triggered by ALT
         virtual void use(Entity *user, Entity *target) {}
         virtual void left();
         virtual void right();
@@ -114,6 +118,7 @@ namespace WolfSheepServer
         Uint16 x;
         Uint16 y;
         short direction;
+        short prepared;
 
         friend std::ostream& operator << (std::ostream &os, const Entity &e);
     private:
