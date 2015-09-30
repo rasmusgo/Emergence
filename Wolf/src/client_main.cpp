@@ -1,16 +1,8 @@
-#ifdef __cplusplus
-    #include <cstdlib>
-#else
-    #include <stdlib.h>
-#endif
-#ifdef __APPLE__
-#include <SDL/SDL.h>
-#else
-#include <SDL.h>
-#endif
+#include <cstdlib>
 
-#include "SDL_opengl.h"
-#include "SDL_net.h"
+#include <SDL.h>
+#include <SDL_opengl.h>
+#include <SDL_net.h>
 
 #include "client.hpp"
 #include "graphics.hpp"

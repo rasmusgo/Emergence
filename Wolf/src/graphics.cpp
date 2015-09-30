@@ -1,13 +1,5 @@
-#ifdef __cplusplus
-    #include <cstdlib>
-#else
-    #include <stdlib.h>
-#endif
-#ifdef __APPLE__
-#include <SDL/SDL.h>
-#else
+#include <cstdlib>
 #include <SDL.h>
-#endif
 
 #include "SDL_opengl.h"
 #include "SDL_image.h"
