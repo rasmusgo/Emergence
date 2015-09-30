@@ -1,5 +1,4 @@
-#ifndef BACKPACK_H
-#define BACKPACK_H
+#pragma once
 
 #include "entity.h"
 #include "container.h"
