@@ -142,5 +142,4 @@ protected:
 private:
 };
 
-}
-#endif // BACKPACK_H
+} // WolfSheepServer

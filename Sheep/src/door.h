@@ -1,5 +1,4 @@
-#ifndef DOOR_H
-#define DOOR_H
+#pragma once
 
 #include "entity.h"
 
@@ -68,5 +67,4 @@ protected:
 private:
 };
 
-}
-#endif // DOOR_H
+} // WolfSheepServer

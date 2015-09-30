@@ -1,5 +1,4 @@
-#ifndef SWORD_H
-#define SWORD_H
+#pragma once
 
 #include "entity.h"
 
@@ -50,5 +49,4 @@ protected:
 private:
 };
 
-}
-#endif // SWORD_H
+} // WolfSheepServer

@@ -1,5 +1,4 @@
-#ifndef WORLDPOSITION_H
-#define WORLDPOSITION_H
+#pragma once
 
 /****************************************
  * This code is not in use right now
@@ -32,5 +31,4 @@ protected:
 private:
 };
 
-}
-#endif // WORLDPOSITION_H
+} // WolfSheepServer

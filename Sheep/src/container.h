@@ -1,5 +1,4 @@
-#ifndef CONTAINER_H
-#define CONTAINER_H
+#pragma once
 
 #include "entity.h"
 
@@ -13,5 +12,4 @@ public:
 	virtual Entity* pop() = 0;
 };
 
-}
-#endif // CONTAINER_H
+} // WolfSheepServer

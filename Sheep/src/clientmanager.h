@@ -1,5 +1,4 @@
-#ifndef CLIENTMANAGER_H
-#define CLIENTMANAGER_H
+#pragma once
 
 #include "SDL_net.h"
 
@@ -54,6 +53,4 @@ private:
 	bool need_to_load;
 };
 
-}
-
-#endif // CLIENTMANAGER_H
+} // WolfSheepServer

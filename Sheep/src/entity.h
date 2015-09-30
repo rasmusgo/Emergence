@@ -1,5 +1,4 @@
-#ifndef ENTITY_H
-#define ENTITY_H
+#pragma once
 
 #include "SDL.h"
 
@@ -141,6 +140,4 @@ private:
 };
 
 typedef void (Entity::*EntityMemberFunction)();
-}
-
-#endif // ENTITY_H
+} // WolfSheepServer

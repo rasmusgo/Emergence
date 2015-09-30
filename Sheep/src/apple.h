@@ -1,5 +1,4 @@
-#ifndef APPLE_H
-#define APPLE_H
+#pragma once
 
 #include "entity.h"
 
@@ -7,6 +6,7 @@
 
 namespace WolfSheepServer
 {
+
 class Apple: public Entity
 {
 public:
@@ -55,5 +55,4 @@ protected:
 private:
 };
 
-}
-#endif // APPLE_H
+} // WolfSheepServer

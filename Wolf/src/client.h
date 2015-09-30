@@ -1,5 +1,4 @@
-#ifndef CLIENT_H_INCLUDED
-#define CLIENT_H_INCLUDED
+#pragma once
 
 #include "SDL.h"
 #include "SDL_thread.h"
@@ -67,6 +66,4 @@ private:
     float t;
 };
 
-}
-
-#endif // CLIENT_H_INCLUDED
+} // WolfSheepClient

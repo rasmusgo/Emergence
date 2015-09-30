@@ -1,5 +1,4 @@
-#ifndef RABBIT_H
-#define RABBIT_H
+#pragma once
 
 #include "entity.h"
 
@@ -48,5 +47,4 @@ protected:
 private:
 };
 
-}
-#endif // RABBIT_H
+} // WolfSheepServer

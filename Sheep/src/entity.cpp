@@ -226,4 +226,4 @@ void Entity::unpack(std::istream &is)
 	parent = world->get_entity_from_id(id);
 }
 
-}
+} // WolfSheepServer

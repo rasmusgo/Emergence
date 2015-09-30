@@ -1,5 +1,4 @@
-#ifndef SPRITE_H_INCLUDED
-#define SPRITE_H_INCLUDED
+#pragma once
 
 #include "SDL.h"
 #include "SDL_thread.h"
@@ -47,6 +46,4 @@ protected:
     float t;
 };
 
-}
-
-#endif // SPRITE_H_INCLUDED
+} // WolfSheepClient

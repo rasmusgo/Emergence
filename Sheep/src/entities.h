@@ -1,3 +1,5 @@
+#pragma once
+
 #include "entity.h"
 #include "apple.h"
 #include "backpack.h"

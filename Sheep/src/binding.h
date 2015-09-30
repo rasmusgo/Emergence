@@ -1,12 +1,4 @@
-/*
- * binding.h
- *
- *  Created on: Aug 11, 2013
- *      Author: rasmusgo
- */
-
-#ifndef BINDING_H_
-#define BINDING_H_
+#pragma once
 
 #include "entity.h"
 
@@ -54,5 +46,4 @@ protected:
 	Uint32 repeat;
 };
 
-}
-#endif /* BINDING_H_ */
+} // WolfSheepServer

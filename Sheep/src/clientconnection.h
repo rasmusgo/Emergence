@@ -1,5 +1,4 @@
-#ifndef CLIENTCONNECTION_H
-#define CLIENTCONNECTION_H
+#pragma once
 
 #include "SDL.h"
 #include "SDL_net.h"
@@ -110,6 +109,4 @@ private:
 	std::deque<ReceivedPacket> messages;
 };
 
-}
-#endif // CLIENTCONNECTION_H
-
+} // WolfSheepServer

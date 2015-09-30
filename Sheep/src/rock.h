@@ -1,5 +1,4 @@
-#ifndef ROCK_H
-#define ROCK_H
+#pragma once
 
 #include "entity.h"
 
@@ -35,5 +34,4 @@ protected:
 private:
 };
 
-}
-#endif // ROCK_H
+} // WolfSheepServer

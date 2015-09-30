@@ -1,5 +1,4 @@
-#ifndef HUMAN_H
-#define HUMAN_H
+#pragma once
 
 #include "entity.h"
 
@@ -42,5 +41,4 @@ protected:
 private:
 };
 
-}
-#endif // HUMAN_H
+} // WolfSheepServer

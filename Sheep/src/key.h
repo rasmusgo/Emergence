@@ -1,5 +1,4 @@
-#ifndef KEY_H
-#define KEY_H
+#pragma once
 
 #include "entity.h"
 #include "door.h"
@@ -76,5 +75,4 @@ protected:
 private:
 };
 
-}
-#endif // KEY_H
+} // WolfSheepServer

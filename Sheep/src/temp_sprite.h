@@ -64,5 +64,4 @@ protected:
 	int time;
 };
 
-}
-#endif // TEMP_SPRITE_H
+} // WolfSheepServer

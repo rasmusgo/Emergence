@@ -1,5 +1,4 @@
-#ifndef GRAPHICS_H
-#define GRAPHICS_H
+#pragma once
 
 #include "SDL.h"
 #include "SDL_opengl.h"
@@ -29,6 +28,4 @@ namespace WolfSheepClient
 
 	void draw_quad(int x, int y, int w, int h, float r, float g, float b);
 
-}
-
-#endif // GRAPHICS_H
+} // WolfSheepClient

@@ -1,5 +1,4 @@
-#ifndef WORLD_H
-#define WORLD_H
+#pragma once
 
 #include "entity.h"
 
@@ -81,5 +80,4 @@ protected:
 	Entity* create_entity_sword(std::string line);
 };
 
-}
-#endif
+} // WolfSheepServer
