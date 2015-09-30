@@ -5,7 +5,7 @@
 #include <map>
 #include <vector>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class World
@@ -80,4 +80,4 @@ protected:
 	Entity* create_entity_sword(std::string line);
 };
 
-} // WolfSheepServer
+} // EmergenceServer

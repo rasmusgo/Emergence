@@ -5,7 +5,7 @@
 
 #include <sstream>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class TempSprite: public Entity
@@ -64,4 +64,4 @@ protected:
 	int time;
 };
 
-} // WolfSheepServer
+} // EmergenceServer

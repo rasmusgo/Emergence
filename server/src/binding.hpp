@@ -2,7 +2,7 @@
 
 #include "entity.hpp"
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class Binding
@@ -46,4 +46,4 @@ protected:
 	Uint32 repeat;
 };
 
-} // WolfSheepServer
+} // EmergenceServer

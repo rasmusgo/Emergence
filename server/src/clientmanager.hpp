@@ -8,7 +8,7 @@
 
 #include <vector>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class ClientManager
@@ -53,4 +53,4 @@ private:
 	bool need_to_load;
 };
 
-} // WolfSheepServer
+} // EmergenceServer

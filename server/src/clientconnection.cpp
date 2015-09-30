@@ -10,7 +10,7 @@
 #include <deque>
 #include <string>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 ClientConnection::ClientConnection(TCPsocket sock, ClientManager *manager) :

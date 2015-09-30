@@ -11,7 +11,7 @@
 #include <map>
 #include <set>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 // Forward declaration (instead of include)
 class ClientManager;
@@ -109,4 +109,4 @@ private:
 	std::deque<ReceivedPacket> messages;
 };
 
-} // WolfSheepServer
+} // EmergenceServer

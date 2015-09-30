@@ -4,7 +4,7 @@
  * This code is not in use right now
  ****************************************/
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class World;
@@ -31,4 +31,4 @@ protected:
 private:
 };
 
-} // WolfSheepServer
+} // EmergenceServer

@@ -10,7 +10,7 @@
 
 #include <map>
 
-namespace WolfSheepClient
+namespace EmergenceClient
 {
 
 class Client
@@ -66,4 +66,4 @@ private:
     float t;
 };
 
-} // WolfSheepClient
+} // EmergenceClient

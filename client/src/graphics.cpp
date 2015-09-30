@@ -9,7 +9,7 @@
 #include <map>
 #include <string>
 
-namespace WolfSheepClient
+namespace EmergenceClient
 {
     GLuint nulltexture = 0;
     std::map<std::string, GLuint> textures;

@@ -3,7 +3,7 @@
 
 #include <ostream>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 const int Entity::dx[] = { 1, 0, -1, 0 };
@@ -226,4 +226,4 @@ void Entity::unpack(std::istream &is)
 	parent = world->get_entity_from_id(id);
 }
 
-} // WolfSheepServer
+} // EmergenceServer

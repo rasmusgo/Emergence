@@ -2,7 +2,7 @@
 
 #include "entity.hpp"
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class Human: public Entity
@@ -41,4 +41,4 @@ protected:
 private:
 };
 
-} // WolfSheepServer
+} // EmergenceServer

@@ -21,5 +21,5 @@ Installing and running
     ./emergence_server &
     # Run client
     cd ../client
-    ../emergence &
+    ./emergence_client &
 

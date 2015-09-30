@@ -7,7 +7,7 @@
 #include "clientmanager.hpp"
 #include "entities.hpp"
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 ClientManager::ClientManager(int port) :
 		tcpsock(0),

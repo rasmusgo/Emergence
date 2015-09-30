@@ -10,7 +10,7 @@
 
 #include "clientmanager.hpp"
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 void quit()
 {
@@ -19,7 +19,7 @@ void quit()
 }
 }
 
-using namespace WolfSheepServer;
+using namespace EmergenceServer;
 
 int main(int argc, char** argv)
 {

@@ -4,7 +4,7 @@
 
 #include <sstream>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class Apple: public Entity
@@ -55,4 +55,4 @@ protected:
 private:
 };
 
-} // WolfSheepServer
+} // EmergenceServer

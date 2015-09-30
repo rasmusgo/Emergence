@@ -6,7 +6,7 @@
 #include <map>
 #include <math.h>
 
-namespace WolfSheepClient
+namespace EmergenceClient
 {
     Sprite::Sprite() :
             x(0),

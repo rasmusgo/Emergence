@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 class World;
 
@@ -140,4 +140,4 @@ private:
 };
 
 typedef void (Entity::*EntityMemberFunction)();
-} // WolfSheepServer
+} // EmergenceServer

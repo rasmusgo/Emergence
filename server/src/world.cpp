@@ -13,7 +13,7 @@
 // TODO: Save to disk
 // TODO: Load from disk
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 World::World() :
 		auto_id(1), time(0)

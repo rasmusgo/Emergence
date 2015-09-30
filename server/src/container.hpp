@@ -2,7 +2,7 @@
 
 #include "entity.hpp"
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class Container
@@ -12,4 +12,4 @@ public:
 	virtual Entity* pop() = 0;
 };
 
-} // WolfSheepServer
+} // EmergenceServer

@@ -9,7 +9,7 @@
 
 #include "oglconsole.h"
 
-namespace WolfSheepClient
+namespace EmergenceClient
 {
     static bool done = false;
     static Client *client = 0;
@@ -84,7 +84,7 @@ namespace WolfSheepClient
     }
 }
 
-using namespace WolfSheepClient;
+using namespace EmergenceClient;
 
 extern "C"
 {
@@ -129,7 +129,7 @@ int main ( int argc, char** argv )
         return 1;
     }
 
-    SDL_WM_SetCaption("Wolf Client","Wolf Client");
+    SDL_WM_SetCaption("Emergence Client","Emergence Client");
 
     init_opengl(width, height);
 

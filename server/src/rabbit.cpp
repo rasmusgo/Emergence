@@ -10,7 +10,7 @@
 
 // Reference on rabbits: http://www.welshrabbitry.com/birth.html
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 Rabbit::Rabbit(int x, int y, bool male) :
 		health(50),

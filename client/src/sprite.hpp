@@ -9,7 +9,7 @@
 
 #include <map>
 
-namespace WolfSheepClient
+namespace EmergenceClient
 {
 
 class Sprite
@@ -46,4 +46,4 @@ protected:
     float t;
 };
 
-} // WolfSheepClient
+} // EmergenceClient

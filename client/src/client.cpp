@@ -14,7 +14,7 @@
 
 // TODO: network statistics
 
-namespace WolfSheepClient
+namespace EmergenceClient
 {
     Client::Client(const char *host, Uint16 port) :
 		listener_thread(0),

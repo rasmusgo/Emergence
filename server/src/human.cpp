@@ -4,7 +4,7 @@
 
 #include <sstream>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 Human::Human(int x, int y) :
 		in_primary_hand(0),

@@ -3,7 +3,7 @@
 #include "entity.hpp"
 #include "door.hpp"
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class Key: public Entity
@@ -75,4 +75,4 @@ protected:
 private:
 };
 
-} // WolfSheepServer
+} // EmergenceServer

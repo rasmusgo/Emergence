@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <sstream>
 
-namespace WolfSheepServer
+namespace EmergenceServer
 {
 
 class Backpack: public Entity, public Container
@@ -141,4 +141,4 @@ protected:
 private:
 };
 
-} // WolfSheepServer
+} // EmergenceServer

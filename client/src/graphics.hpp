@@ -5,7 +5,7 @@
 
 #include <string>
 
-namespace WolfSheepClient
+namespace EmergenceClient
 {
 
 	void init_opengl(int width, int height);
@@ -28,4 +28,4 @@ namespace WolfSheepClient
 
 	void draw_quad(int x, int y, int w, int h, float r, float g, float b);
 
-} // WolfSheepClient
+} // EmergenceClient
