@@ -17,9 +17,9 @@ Installing and running
     cmake ..
     make
     # Run server
-    cd ../Sheep
-    ../build/Sheep/sheep &
+    cd ../server
+    ../build/server/sheep &
     # Run client
-    cd ../Wolf
-    ../build/Wolf/wolf &
+    cd ../client
+    ../build/client/wolf &
 
