@@ -12,16 +12,18 @@ FILE(GLOB source
 	"${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
 )
 
-add_executable(wolf ${source})
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_CURRENT_SOURCE_DIR}")
 
-target_link_libraries(wolf
+add_executable(emergence ${source})
+
+target_link_libraries(emergence
 	${SDL_LIBRARY}
 	${SDL_NET_LIBRARY}
 	${SDL_IMAGE_LIBRARY}
 	${OPENGL_LIBRARY}
 )
 
-include_directories(wolf
+include_directories(emergence
 	${SDL_INCLUDE_DIR}
 )
 

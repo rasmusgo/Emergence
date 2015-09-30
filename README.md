@@ -1,4 +1,4 @@
-WolfSheep
+Emergence
 =========
 
 Small multiplayer sandbox game with growing grass and cute rabbits
@@ -18,8 +18,8 @@ Installing and running
     make
     # Run server
     cd ../server
-    ../build/server/sheep &
+    ./emergence_server &
     # Run client
     cd ../client
-    ../build/client/wolf &
+    ../emergence &
 

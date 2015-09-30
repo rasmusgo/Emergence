@@ -10,14 +10,16 @@ FILE(GLOB source
 	"${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
 )
 
-add_executable(sheep ${source})
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_CURRENT_SOURCE_DIR}")
 
-target_link_libraries(sheep
+add_executable(emergence_server ${source})
+
+target_link_libraries(emergence_server
 	${SDL_LIBRARY}
 	${SDL_NET_LIBRARY}
 )
 
-include_directories(sheep
+include_directories(emergence_server
 	${SDL_INCLUDE_DIR}
 )
 
