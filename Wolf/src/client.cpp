@@ -3,10 +3,10 @@
 #include "SDL_mutex.h"
 #include "SDL_net.h"
 
-#include "graphics.h"
+#include "graphics.hpp"
 #include "oglconsole.h"
-#include "sprite.h"
-#include "client.h"
+#include "sprite.hpp"
+#include "client.hpp"
 
 #include <list>
 #include <map>

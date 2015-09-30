@@ -1,7 +1,7 @@
 #pragma once
 
-#include "entity.h"
-#include "door.h"
+#include "entity.hpp"
+#include "door.hpp"
 
 namespace WolfSheepServer
 {

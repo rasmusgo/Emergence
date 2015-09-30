@@ -2,9 +2,9 @@
 
 #include "SDL_net.h"
 
-#include "clientconnection.h"
-#include "entity.h"
-#include "world.h"
+#include "clientconnection.hpp"
+#include "entity.hpp"
+#include "world.hpp"
 
 #include <vector>
 

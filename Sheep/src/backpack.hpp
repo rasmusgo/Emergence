@@ -1,7 +1,7 @@
 #pragma once
 
-#include "entity.h"
-#include "container.h"
+#include "entity.hpp"
+#include "container.hpp"
 
 #include <stdlib.h>
 #include <sstream>

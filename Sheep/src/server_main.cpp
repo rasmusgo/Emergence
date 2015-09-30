@@ -16,7 +16,7 @@
 #include "SDL_thread.h"
 #include "SDL_mutex.h"
 
-#include "clientmanager.h"
+#include "clientmanager.hpp"
 
 namespace WolfSheepServer
 {

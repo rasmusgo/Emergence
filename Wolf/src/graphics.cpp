@@ -12,7 +12,7 @@
 #include "SDL_opengl.h"
 #include "SDL_image.h"
 
-#include "graphics.h"
+#include "graphics.hpp"
 
 #include <map>
 #include <string>

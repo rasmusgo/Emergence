@@ -1,7 +1,7 @@
-#include "world.h"
-#include "entity.h"
+#include "world.hpp"
+#include "entity.hpp"
 
-#include "entities.h"
+#include "entities.hpp"
 
 #include <map>
 #include <math.h>

@@ -1,11 +1,11 @@
 #include "SDL.h"
 #include "SDL_net.h"
 
-#include "clientconnection.h"
-#include "clientmanager.h"
-#include "entity.h"
-#include "world.h"
-#include "binding.h"
+#include "clientconnection.hpp"
+#include "clientmanager.hpp"
+#include "entity.hpp"
+#include "world.hpp"
+#include "binding.hpp"
 
 #include <deque>
 #include <string>

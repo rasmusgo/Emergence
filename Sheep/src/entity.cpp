@@ -1,5 +1,5 @@
-#include "entity.h"
-#include "world.h"
+#include "entity.hpp"
+#include "world.hpp"
 
 #include <ostream>
 

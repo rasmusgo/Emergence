@@ -5,8 +5,8 @@
 #include "SDL_mutex.h"
 #include "SDL_net.h"
 
-#include "graphics.h"
-#include "sprite.h"
+#include "graphics.hpp"
+#include "sprite.hpp"
 
 #include <map>
 

@@ -1,7 +1,7 @@
 #ifndef TEMP_SPRITE_H
 #define TEMP_SPRITE_H
 
-#include "entity.h"
+#include "entity.hpp"
 
 #include <sstream>
 

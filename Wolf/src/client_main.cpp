@@ -12,8 +12,8 @@
 #include "SDL_opengl.h"
 #include "SDL_net.h"
 
-#include "client.h"
-#include "graphics.h"
+#include "client.hpp"
+#include "graphics.hpp"
 
 #include "oglconsole.h"
 

@@ -1,7 +1,7 @@
 #include "SDL.h"
 
-#include "graphics.h"
-#include "sprite.h"
+#include "graphics.hpp"
+#include "sprite.hpp"
 
 #include <map>
 #include <math.h>

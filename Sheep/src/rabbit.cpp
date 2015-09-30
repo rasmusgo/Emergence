@@ -1,5 +1,5 @@
-#include "rabbit.h"
-#include "world.h"
+#include "rabbit.hpp"
+#include "world.hpp"
 
 #include <stdlib.h>
 #include <sstream>

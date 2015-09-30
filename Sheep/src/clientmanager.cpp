@@ -4,16 +4,8 @@
 #include <stdlib.h>
 #include <fstream>
 
-#include "clientmanager.h"
-#include "entity.h"
-#include "human.h"
-#include "backpack.h"
-#include "apple.h"
-#include "rabbit.h"
-#include "rock.h"
-#include "key.h"
-#include "door.h"
-#include "sword.h"
+#include "clientmanager.hpp"
+#include "entities.hpp"
 
 namespace WolfSheepServer
 {

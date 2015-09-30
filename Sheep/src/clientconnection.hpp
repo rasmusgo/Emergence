@@ -3,8 +3,8 @@
 #include "SDL.h"
 #include "SDL_net.h"
 
-#include "entity.h"
-#include "binding.h"
+#include "entity.hpp"
+#include "binding.hpp"
 
 #include <deque>
 #include <string>
