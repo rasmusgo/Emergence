@@ -31,9 +31,9 @@ namespace EmergenceClient
         char filename[128];
         for (int i = 0; i < 256; ++i)
         {
-        	sprintf(filename, "data/grass%03d.png", i);
-        	tile_textures[i] = create_texture(filename);
-        	if (tile_textures[i] == 0)
+            sprintf(filename, "data/grass%03d.png", i);
+            tile_textures[i] = create_texture(filename);
+            if (tile_textures[i] == 0)
                 tile_textures[i] = nulltexture;
         }
     }

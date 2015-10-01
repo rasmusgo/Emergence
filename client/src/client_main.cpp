@@ -14,18 +14,18 @@ namespace EmergenceClient
     static bool done = false;
     static Client *client = 0;
 
-	void quit()
-	{
+    void quit()
+    {
         // Disconnect client
         delete client;
         client = 0;
 
-	    OGLCONSOLE_Quit();
-		SDLNet_Quit();
-		SDL_Quit();
-	}
+        OGLCONSOLE_Quit();
+        SDLNet_Quit();
+        SDL_Quit();
+    }
 
-	void cmdCB(OGLCONSOLE_Console console, char *cmd)
+    void cmdCB(OGLCONSOLE_Console console, char *cmd)
     {
         // TODO: Here would be a good place to use a map with member function pointers
         if (!strncmp(cmd, "quit", 4))

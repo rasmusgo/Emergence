@@ -17,11 +17,11 @@
 namespace EmergenceClient
 {
     Client::Client(const char *host, Uint16 port) :
-		listener_thread(0),
-		mutex(0),
-		dx(0),
-		dy(0),
-		t(0)
+        listener_thread(0),
+        mutex(0),
+        dx(0),
+        dy(0),
+        t(0)
     {
         for (int i = 0; i < 32*32; ++i)
             m_grass[i] = 0;
@@ -145,20 +145,20 @@ namespace EmergenceClient
 
     Client::~Client()
     {
-    	if (listener_thread != 0)
-			SDL_KillThread(listener_thread);
+        if (listener_thread != 0)
+            SDL_KillThread(listener_thread);
 
         // close the connection on sock
         SDLNet_TCP_Close(sock);
 
         if (mutex != 0)
-			SDL_DestroyMutex(mutex);
+            SDL_DestroyMutex(mutex);
     }
 
     int Client::listen(void *data)
     {
-    	Client *self = (Client*)data;
-    	return self->listen();
+        Client *self = (Client*)data;
+        return self->listen();
     }
 
     int Client::listen()
@@ -191,8 +191,8 @@ namespace EmergenceClient
         {
             for(;;)
             {
-		        char msg;
-		        recieve(&msg, 1);
+                char msg;
+                recieve(&msg, 1);
 
 #define CALL_MEMBER_FN(object,ptrToMember)  ((object).*(ptrToMember))
 
@@ -205,8 +205,8 @@ namespace EmergenceClient
                 }
                 else
                     printf("unknown packet type: %c (%d) after last known command: %c\n", msg, (int)((unsigned char)(msg)), last_msg);
-		    }
-		}
+            }
+        }
         catch (...)
         {
             return 0;
